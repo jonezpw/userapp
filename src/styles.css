@@ -1,0 +1,14 @@
+.avatar {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.lang {
+  margin: 5px 10px;
+}
+
+.center {
+  display: table;
+  margin: 10px auto 5px;
+  text-align: center;
+}

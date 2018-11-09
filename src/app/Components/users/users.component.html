@@ -1,0 +1,10 @@
+<div class='container'>
+  <div *ngFor='let user of users' class='item' (click)='onClick(user.id)'>
+    <div class='content'>
+      <img class='avatar center' src='assets/avatar.png'>
+      <div class='center'><b>{{ user.name }}</b></div>
+      <div class='center'>{{ user.age }} years</div>
+      <div class='center lang'>Language: {{ getKnowledge(user) }}</div>
+    </div>
+  </div>
+</div>

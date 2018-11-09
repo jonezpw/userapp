@@ -1,0 +1,17 @@
+<button type='button' (click)='back()'>Back</button>
+
+<img class='avatar center' src='assets/avatar.png'>
+<div class='center'><b>{{ user.name }}</b></div>
+<div class='center'>{{ user.age }} years</div>
+<div *ngIf='user.city; else enterCity' class='center'>{{ user.city }}</div>
+<hr>
+<div class='center' *ngFor='let k of user.knowledge'>
+  <b>{{k.language}}</b>
+  <div class='center' style='margin: 0px;' *ngIf='k.frameworks.length'>{{ k.frameworks.join(' - ') }}</div>
+</div>
+
+<ng-template #enterCity>
+  <div class='center'>Country: <input style='height: 100%;' type='text' [formControl]='city'>
+    <button (click)='updateCity()' class='btn primary'>Submit</button>
+  </div>
+</ng-template>
